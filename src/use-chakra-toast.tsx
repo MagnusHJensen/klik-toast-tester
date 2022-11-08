@@ -19,7 +19,7 @@ type NavigationStateProps = {
 };
 
 export function useChakraToast() {
-  const toast = createStandaloneToast();
+  const { toast } = createStandaloneToast();
 
   function showNotification({
     title,

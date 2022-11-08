@@ -1,6 +1,6 @@
 import { RenderProps } from "@chakra-ui/react";
-import { IInlineNotificationProps, useToastStandalone } from "@lego/klik-ui";
-import { CloseButton, InlineNotification, useToast } from "@lego/klik-ui";
+import { createStandaloneToast, IInlineNotificationProps } from "@lego/klik-ui";
+import { CloseButton, InlineNotification } from "@lego/klik-ui";
 
 export type NotificationProps = {
   title: string;
@@ -19,7 +19,7 @@ type NavigationStateProps = {
 };
 
 export function useKlikToast() {
-  const toast = useToast();
+  const { toast } = createStandaloneToast();
 
   function showNotification({
     title,
